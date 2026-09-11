@@ -149,35 +149,30 @@ GitHub	Source-code management and public repository
 
 ## 📂 Project Structure
 Document-intelligence-platform/
-│
 ├── backend/
 │   ├── app/
 │   │   ├── api/
-│   │   │   └── routes/
 │   │   ├── core/
+│   │   ├── routes/
 │   │   ├── services/
-│   │   ├── tests/
 │   │   └── main.py
-│   │
+│   ├── tests/
+│   ├── __init__.py
 │   └── requirements.txt
-│
 ├── frontend/
 │   ├── static/
 │   │   ├── css/
 │   │   └── js/
 │   └── templates/
-│       ├── dashboard.html
-│       └── document_result.html
-│
 ├── sample_outputs/
+├── Architecturee/
 ├── test_documents/
 ├── .dockerignore
 ├── .env.example
 ├── .gitignore
 ├── Dockerfile
-├── README.md
-└── documents.db
-```
+├── pytest.ini
+└── README.md
 
 ## ⚙️ Environment Variables
 
