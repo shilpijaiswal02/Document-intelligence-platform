@@ -1,0 +1,97 @@
+{
+  "document_name": "batch3-1445.jpg",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "file_validation": {
+    "file_type": ".jpg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "header": {
+      "document_type": "Invoice",
+      "invoice_number": "0001131",
+      "reference": "7783 Newhaven Dr"
+    },
+    "dates": [],
+    "parties": {
+      "seller": {
+        "name": "Roofing Renovations INC",
+        "address": "4917 Old Randleman Rd, Greensboro, North Carolina 27406, United States",
+        "phone": "336-862-5235"
+      },
+      "buyer": {
+        "name": "Real Property Management",
+        "address": "1901 Lendew St Suite 7, Greensboro, NC"
+      }
+    },
+    "currency": null,
+    "totals": {
+      "subtotal": 2650,
+      "tax_total": 0,
+      "total_amount": 2650,
+      "amount_paid": 0,
+      "amount_due": 2650
+    },
+    "line_items": [],
+    "comparative_periods": [],
+    "tables": [],
+    "additional_fields": {},
+    "evidence": [
+      {
+        "source_text": "Roofing Renovations INC 4917 Old Randleman Rd\n336-862-5235 | Greensboro, North Carolina\n\n27406\n\nUnited States\n\nBilled To Date of Issue Invoice Number Amount Due (USD)\nReal Property Management 01/29/2020 0001131 $ O\n1901 Lendew St Suite 7 2 he) 5O. @\nGreensboro, NC Due Date Reference\name 01/29/2020 7783 Newhaven Dr\nDescription Rate Qty Line Total\nReplace HVAC Unit. $2,650.00 1 $2,650.00\nSubtotal 2,650.00\nTax 0.00\nTotal 2,650.00\nAmount Paid 0.00\nAmount Due (USD) $2,650.00\nNotes\nT8EW3A3\nTerms\n\nThank you for trusting us with all your home improvement needs.\n",
+        "page_number": 1
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "formula": "Total Capital & Liabilities ≈ Total Assets",
+        "input_values": {
+          "total_capital_and_liabilities": null,
+          "total_assets": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Sum of Asset Components ≈ Total Assets",
+        "input_values": {
+          "asset_components": []
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Sum of Capital & Liability Components ≈ Total Capital & Liabilities",
+        "input_values": {
+          "capital_and_liability_components": []
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "tolerance": 0.01,
+    "extraction_quality": {
+      "quality_status": "WARNING",
+      "warnings": [
+        "OCR contains possible tabular financial information but no tables were extracted."
+      ]
+    }
+  },
+  "processing_metadata": {
+    "processing_time_seconds": 40,
+    "file_name": "tmpvai9w3gp.jpg",
+    "extraction_quality_status": "WARNING"
+  }
+}

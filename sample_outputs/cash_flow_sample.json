@@ -1,0 +1,121 @@
+{
+  "document_name": "Consolidated Cash Flow Statement 2021.pdf",
+  "document_type": "cash_flow_statement",
+  "processing_status": "PASS",
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "header": {
+      "title": "Consolidated Cash Flow Statement",
+      "period_ended": "March 31, 2021",
+      "denomination": "Zin ‘000",
+      "page_number": 280
+    },
+    "dates": [],
+    "parties": {
+      "auditor": {
+        "name": "MSKA & Associates",
+        "firm_type": "Chartered Accountants",
+        "firm_registration_number": "105047W",
+        "partner_name": "Swapnil Kale",
+        "membership_number": "117812"
+      },
+      "signatories": [
+        {
+          "name": "Umesh Chandra Sarangi",
+          "title": "Independent Director"
+        },
+        {
+          "name": "Sashidhar Jagdishan",
+          "title": "Managing Director & CEO"
+        },
+        {
+          "name": "Kaizad Bharucha",
+          "title": "Executive Director"
+        },
+        {
+          "name": "Srinivasan Vaidyanathan",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Santosh Haldankar",
+          "title": "Company Secretary"
+        }
+      ]
+    },
+    "currency": null,
+    "totals": {
+      "net_cash_flow_operating_activities_2021": 424764563,
+      "net_cash_flow_operating_activities_2020": -168690920,
+      "net_cash_flow_investing_activities_2021": -16808651,
+      "net_cash_flow_investing_activities_2020": -16169244,
+      "net_cash_flow_financing_activities_2021": -73213515,
+      "net_cash_flow_financing_activities_2020": 243944969,
+      "effect_of_exchange_fluctuation_2021": -1418252,
+      "effect_of_exchange_fluctuation_2020": 2139891,
+      "net_increase_decrease_in_cash_and_cash_equivalents_2021": 333324145,
+      "net_increase_decrease_in_cash_and_cash_equivalents_2020": 61224696,
+      "cash_and_cash_equivalents_beginning_2021": 879401119,
+      "cash_and_cash_equivalents_beginning_2020": 818176423,
+      "cash_and_cash_equivalents_ending_2021": 4212725264,
+      "cash_and_cash_equivalents_ending_2020": 879401119
+    },
+    "line_items": [],
+    "comparative_periods": [],
+    "tables": [],
+    "additional_fields": {},
+    "evidence": [
+      {
+        "source_text": "i Consolidated Cash Flow Statement\n\nFor the year ended March 31, 2021\n\nZin ‘000\nYear ended Year ended\n31-Mar-21 31-Mar-20\nCash flows from / (used in) operating activities\nConsolidated profit before income tax 427,725,836 381,525,366\nAdjustments for :\nDepreciation on fixed assets 13,850,062 12,767,714\n(Profit) / loss on revaluation of investments 14,853,243 7,021,095\n‘Amortisation of premium on held to maturity investments 7,654,693 5,014,137\n(Profit) / loss on sale of fixed assets 2,859 81,865\nProvision / charge for non performing assets 139,270,110 110,657,129\nProvision for standard assets and contingencies 52,830,711 30,574,317\n656,187,514 547,641,623\nAdjustments for :\n(Increase) / decrease in investments (601,586,359) (1,010,700,996)\n(Increase) / decrease in advances (1,556,810,724) (1,855,003,617)\nIncrease / (decrease) in deposits 1,875,137,422 2,237,044,557\n(Increase) / decrease in other assets 83,076,840 (72,497,457)\nIncrease / (decrease) in other liabilities and provisions (1,045,600) 93,598,719\n554,979,093 (69,917,171)\nDirect taxes paid (net of refunds) (130,214,530) (108,773,749)\nNet cash flow from / (used in) operating activities 424,764,563 (168,690,920)\nCash flows from / (used in) investing activities\nPurchase of fixed assets (16,961,460) (16,358,706)\n‘Proceeds from sale of fixed assets 152,809 189,462\nNet cash flow used in investing activities (16,808,651) (16,169,244)\nCash flows (used in) / from financing activities\nIncrease in minority interest - 561,234 748,468\nProceeds from issue of share capital, net of issue expenses 17,600,995 18,486,821\nProceeds from issue of Tier | and Tier Il capital bonds 3,565,000 7,435,000\nRedemption of Tier Il Capital Bonds (11,050,000) -\nIncrease / (decrease) in other borrowings (83,890,744) 283,580,441\nDividend paid during the period (including tax on dividend) - (66,305,761)\nNet cash flow (used in) / from financing activities (73,213,515) 243,944,969\nEffect of exchange fluctuation on translation reserve (1,418,252) 2,13",
+        "page_number": 1
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "formula": "Operating + Investing + Financing + FX/Translation Adjustment ≈ Net Increase in Cash",
+        "input_values": {
+          "operating_activities": null,
+          "investing_activities": null,
+          "financing_activities": null,
+          "fx_adjustment": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Opening Cash + Net Increase + Cash Acquired/Other Adjustments ≈ Closing Cash",
+        "input_values": {
+          "opening_cash": null,
+          "net_increase": null,
+          "cash_acquired_or_other_adjustments": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "tolerance": 0.01,
+    "extraction_quality": {
+      "quality_status": "WARNING",
+      "warnings": [
+        "OCR contains possible tabular financial information but no tables were extracted."
+      ]
+    }
+  },
+  "processing_metadata": {
+    "processing_time_seconds": 140.86,
+    "file_name": "tmpkd5xfmbn.pdf",
+    "extraction_quality_status": "WARNING"
+  }
+}

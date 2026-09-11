@@ -1,0 +1,166 @@
+{
+  "document_name": "Consolidated Profit & Loss 2019.pdf",
+  "document_type": "profit_and_loss",
+  "processing_status": "PASS",
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "header": {
+      "title": "CONSOLIDATED PROFIT AND LOSS ACCOUNT",
+      "statement_period": "For the year ended March 31, 2019",
+      "unit_of_measurement": "in '000"
+    },
+    "dates": [],
+    "parties": {
+      "company": {
+        "name": "HDFC BANK"
+      },
+      "auditor": {
+        "name": "S. R. BATLIBOI & CO. LLP",
+        "firm_registration_number": "301003E/E300005"
+      },
+      "signatories": [
+        {
+          "name": "Shyamala Gopinath",
+          "title": "Chairperson"
+        },
+        {
+          "name": "Aditya Puri",
+          "title": "Managing Director"
+        },
+        {
+          "name": "Keki Mistry",
+          "title": "Director"
+        },
+        {
+          "name": "Malay Patel",
+          "title": "Director"
+        },
+        {
+          "name": "Umesh Sarangi",
+          "title": "Director"
+        },
+        {
+          "name": "Sanjiv Sachar",
+          "title": "Director"
+        },
+        {
+          "name": "Kaizad Bharucha",
+          "title": "Executive Director"
+        },
+        {
+          "name": "Sudhir Soni",
+          "title": "Partner",
+          "membership_number": "41870"
+        },
+        {
+          "name": "Santosh Haldankar",
+          "title": "Company Secretary"
+        },
+        {
+          "name": "Sashidhar Jagdishan",
+          "title": "Chief Financial Officer"
+        }
+      ]
+    },
+    "currency": null,
+    "totals": {
+      "total_income_2019": 1241077909,
+      "total_income_2018": 1013444478,
+      "total_expenditure_2019": 4016621780,
+      "total_expenditure_2018": 827836068,
+      "consolidated_profit_2019": 223324309,
+      "consolidated_profit_2018": 185100242,
+      "total_profit_and_allocations_2019": 654314131,
+      "total_profit_and_allocations_2018": 530423526
+    },
+    "line_items": [],
+    "comparative_periods": [],
+    "tables": [],
+    "additional_fields": {},
+    "evidence": [
+      {
+        "source_text": "CONSOLIDATED PROFIT AND LOSS ACCOUNT\n\nFor the year ended March 31, 2019\n\nin ‘000\nYear ended Year ended\nSchedule 31-Mar-19 31-Mar-18\n1 INCOME\nInterest earned 13 4,051,607,400 852,878,437\nOther income 44 189,470,509 160,566,041\nTotal 1,241,077,909 1,013,444,478\nI EXPENDITURE\nInterest expended 15 537,126,876 423,814,803\nOperating expenses 16 276,947,604 239,272,220\nProvisions and contingencies 202,547,300 164,749,045\nTotal 4,016,621,780 827,836,068\nMM PROFIT\nNet profit for the year 224,456,129 185,608,410\nLess: Minority interest 1,131,820 513,389\nAdd: Share in profits of associates - 5,221\nConsolidated profit for the year 223,324,309 185,100,242\nBalance in the Profit and Loss Account brought forward 430,989,822 345,323,284\nTotal 654,314,131 530,423,526\nIV APPROPRIATIONS\nTransfer to Statutory Reserve 54,997,602 45,620,310\nTax (including cess) on dividend 433,081 507,653\nDividend (including tax / cess thereon) pertaining to previous year paid Roeetee 499,905,804\nduring the year, net of dividend tax credits & ana\nTransfer to General Reserve 21,078,165 17,486,728\nTransfer to Capital Reserve 1,053,354 2,355,227\nTransfer to / (from) Investment Reserve Account - (442,018)\nTransfer to / (from) Investment Fluctuation Reserve 7,730,000 =\nBalance carried over to Balance Sheet 528,496,075 430,989,822\nTotal 654,314,131 530,423,526\nV__EARNINGS PER EQUITY SHARE (Face value % 2 per share) z z\nBasic 83.33, 71.73\nDiluted 82.51 70.76\nSignificant accounting policies and notes to the\nConsolidated financial statements 17818\nThe schedules referred to above form an integral part of the Consolidated\nProfit and Loss Account.\n\nAs per our report of even date. For and on behalf of the Board\nFor S. R. BATLIBOI & CO. LLP Shyamala Gopinath Aditya Puri Keki Mistry\nCrmenes/neee nian Chairperson Managing Director Malay Patel\n\nFirm Registration No, 301003E/E300005\nUmesh Sarangi\n\nSanjiv Sachar\n\nper Sudhir Soni Kaizad Bharucha :\n\nMembership No: 41870 mexceutive Director Mo Reeeenath\nSantosh Haldankar Sashi",
+        "page_number": 1
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "formula": "Interest Earned + Other Income ≈ Total Income",
+        "input_values": {
+          "interest_earned": null,
+          "other_income": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Interest Expended + Operating Expenses + Provisions & Contingencies ≈ Total Expenditure",
+        "input_values": {
+          "interest_expended": null,
+          "operating_expenses": null,
+          "provisions_and_contingencies": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Total Income - Total Expenditure ≈ Consolidated Net Profit before Minority Interest",
+        "input_values": {
+          "total_income": null,
+          "total_expenditure": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Profit before Minority Interest - Minority Interest ≈ Consolidated Net Profit attributable to Group",
+        "input_values": {
+          "profit_before_minority_interest": null,
+          "minority_interest": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Current Profit + Brought Forward Profit ≈ Total Available for Appropriation",
+        "input_values": {
+          "current_profit": null,
+          "brought_forward_profit": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "tolerance": 0.01,
+    "extraction_quality": {
+      "quality_status": "WARNING",
+      "warnings": [
+        "OCR contains possible tabular financial information but no tables were extracted."
+      ]
+    }
+  },
+  "processing_metadata": {
+    "processing_time_seconds": 123.21,
+    "file_name": "tmpkr0arorx.pdf",
+    "extraction_quality_status": "WARNING"
+  }
+}

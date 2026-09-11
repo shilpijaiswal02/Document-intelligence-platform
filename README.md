@@ -258,11 +258,11 @@ GET	/document/{document_name}	Display document result
 GET	/api/v1/health	Health check
 GET	/	Dashboard
 
-Swagger documentation:
+## Swagger documentation:
 
 https://document-intelligence-platform-zwf0.onrender.com/docs
 
-📤 Process Document API
+## Process Document API
 Request
 POST /api/v1/documents/process
 Content-Type: multipart/form-data
@@ -490,6 +490,40 @@ Invoice documents
 Balance sheet PDFs
 JPG/image documents
 Financial validation failure scenarios
+## Testing
+
+Automated tests were executed using pytest.
+
+**Result: 14 tests passed successfully.**
+
+The platform was tested across the supported financial document categories and key application scenarios.
+
+| Test Scenario | Result |
+|---|---|
+| Invoice processing | PASS |
+| Balance Sheet processing | PASS |
+| Profit & Loss processing | PASS |
+| Cash Flow Statement processing | PASS |
+| Scanned/Image document processing | PASS |
+| Financial validation failure scenario | PASS |
+| API end-to-end flow | PASS |
+| PostgreSQL/Neon persistence | PASS |
+| Automated tests | Verified with pytest |
+
+### Validation Testing
+
+Financial validation was tested using document-specific checks. A validation failure was observed for a complex invoice where extracted financial values did not fully reconcile, demonstrating that the system can identify inconsistencies instead of blindly accepting extracted values.
+
+### Sample Outputs
+
+Real processed JSON responses are provided in:
+
+`sample_outputs/`
+
+### Invalid / Unreadable Document Testing
+
+The application was tested with an unreadable image document. The system detected that no readable text was available and prevented normal document processing, displaying an appropriate user-facing message instead of producing unreliable extraction results.
+
 
 ## Known Limitations
 OCR accuracy can decrease for low-quality or heavily distorted images.

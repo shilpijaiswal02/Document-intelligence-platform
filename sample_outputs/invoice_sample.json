@@ -1,0 +1,280 @@
+{
+  "document_name": "batch1-1109.jpg",
+  "document_type": "invoice",
+  "processing_status": "PASS",
+  "file_validation": {
+    "file_type": ".jpg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS"
+  },
+  "extracted_data": {
+    "header": {
+      "invoice_number": "94404257",
+      "invoice_date": "07/03/2013"
+    },
+    "dates": [],
+    "parties": {
+      "seller": {
+        "name": "Cruz PLC",
+        "address": "USNV Harris\nFPO AA 34966",
+        "tax_id": "964-99-8203",
+        "iban": "GB31XOVK34958853133204"
+      },
+      "buyer": {
+        "name": "Sandoval-Phillips",
+        "address": "23699 James Villages Suite 818\nWest Tamara, MS 58825",
+        "tax_id": "976-94-5245"
+      }
+    },
+    "currency": null,
+    "totals": {
+      "net_amount": 126.27,
+      "tax_amount": 12.63,
+      "gross_amount": 138.9
+    },
+    "line_items": [
+      {
+        "item_number": null,
+        "description": "ils BO0O28NAO6EC Shoeless Joe",
+        "hsn_sac": null,
+        "quantity": 5,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": "2",
+        "description": "The Fifty Greatest Conspiracies of All Time History s Biggest Myster",
+        "hsn_sac": null,
+        "quantity": 3,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": null,
+        "description": "Be Story of a Soul: The Autobiography of St. Therese of Lisieux",
+        "hsn_sac": null,
+        "quantity": 5,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": "4",
+        "description": "The Complete Idiots Guide to Trouble-Free Home Re",
+        "hsn_sac": null,
+        "quantity": 4,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": "5",
+        "description": "Rebecca to the Rescue (American Girl (Quality))",
+        "hsn_sac": null,
+        "quantity": 2,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": "6",
+        "description": "Tales from the Buffalo Bills",
+        "hsn_sac": null,
+        "quantity": 1,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      },
+      {
+        "item_number": null,
+        "description": "a Vietnam, The Decisive Battles",
+        "hsn_sac": null,
+        "quantity": 2,
+        "unit": null,
+        "rate": null,
+        "discount": null,
+        "amount": null,
+        "tax_rate": null,
+        "tax_amount": null,
+        "net_amount": null,
+        "gross_amount": null
+      }
+    ],
+    "comparative_periods": [],
+    "tables": [],
+    "additional_fields": {},
+    "evidence": [
+      {
+        "source_text": "Invoice no: 94404257\n\nDate of issue:\n\nSeller:\n\nCruz PLC\nUSNV Harris\nFPO AA 34966\n\nTax Id: 964-99-8203\nIBAN: GB31XOVK34958853133204\n\nITEMS\nNo. Description Qty\nils BO0O28NAO6EC Shoeless Joe 5,00\n2. The Fifty Greatest Conspiracies 3,00\nof All Time History s Biggest\nMyster\nBe Story of a Soul: The 5,00\nAutobiography of St. Therese of\nLisieux\n4. The Complete Idiots Guide to 4,00\n\nTrouble-Free Home Re\n\n5: Rebecca to the Rescue 2,00\n(American Girl (Quality))\n\n6. Tales from the Buffalo Bills 1,00\na Vietnam, The Decisive Battles 2,00\nSUMMARY\nVAT [%]\n10%\nTotal\n\n07/03/2013\n\nUM\n\neacn\n\neacn\n\neacn\n\neacn\n\neacn\n\neacn\n\neacn\n\nClient:\n\nSandoval-Phillips\n23699 James Villages Suite 818\nWest Tamara, MS 58825\n\nTax Id: 976-94-5245\n\nNet price Net worth VAT [%]\n\n3,49 17,45 10%\n4,49 13,47 10%\n9,35 46,75 10%\n4,49 17,96 10%\n4,89 9,78 10%\n5,50 5,50 10%\n7,68 15,36 10%\nNet worth VAT\n\n126,27 12,63)\n\n$ 126,27 $ 12,63\n\nGross\nworth\n\n19,20\n\n14,82\n\n51,42\n\n19,76\n\n10,76\n\n6,05\n\n16,90\n\nGross worth\n\n138,90\n\n$ 138,90\n",
+        "page_number": 1
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 1,
+          "quantity": 5,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 2,
+          "quantity": 3,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 3,
+          "quantity": 5,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 4,
+          "quantity": 4,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 5,
+          "quantity": 2,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 6,
+          "quantity": 1,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Quantity × Unit Price ≈ Line Total",
+        "input_values": {
+          "line_item": 7,
+          "quantity": 2,
+          "unit_price": null
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Sum of Line Totals ≈ Subtotal",
+        "input_values": {
+          "line_totals": []
+        },
+        "calculated_value": null,
+        "reported_value": 126.27,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "formula": "Taxable Amount + Tax ≈ Total",
+        "input_values": {
+          "taxable_amount": 126.27,
+          "tax_amount": 12.63
+        },
+        "calculated_value": 138.9,
+        "reported_value": 138.9,
+        "variance": 0,
+        "status": "PASS"
+      },
+      {
+        "formula": "Cash Paid - Total ≈ Change",
+        "input_values": {
+          "cash_paid": null,
+          "total": 138.9
+        },
+        "calculated_value": null,
+        "reported_value": null,
+        "variance": null,
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "tolerance": 0.01,
+    "extraction_quality": {
+      "quality_status": "WARNING",
+      "warnings": [
+        "OCR contains possible tabular financial information but no tables were extracted."
+      ]
+    }
+  },
+  "processing_metadata": {
+    "processing_time_seconds": 23.85,
+    "file_name": "tmp139s4smb.jpg",
+    "extraction_quality_status": "WARNING"
+  }
+}
