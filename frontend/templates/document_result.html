@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document Result</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>Document Intelligence Platform</h1>
+        <p>Document Processing Result</p>
+    </header>
+
+
+    <main>
+
+        <section>
+            <a href="/">
+                ← Back to Dashboard
+            </a>
+
+            <h2 id="documentName">
+                Loading document...
+            </h2>
+
+            <div id="documentInfo"></div>
+        </section>
+
+
+        <section>
+            <h2>Extracted Information</h2>
+
+            <div id="extractedData">
+                Loading...
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Financial Validation</h2>
+
+            <div id="validationData">
+                Loading...
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Raw JSON</h2>
+
+            <pre id="rawJson">
+                Loading...
+            </pre>
+        </section>
+
+    </main>
+
+
+    <script>
+        const documentName =
+            decodeURIComponent(
+                window.location.pathname
+                    .split("/")
+                    .pop()
+            );
+
+
+        async function loadDocument() {
+
+            try {
+
+                const response = await fetch(
+                    `/api/v1/documents/${encodeURIComponent(documentName)}`
+                );
+
+
+                if (!response.ok) {
+                    throw new Error(
+                        "Document could not be found."
+                    );
+                }
+
+
+                const data = await response.json();
+
+
+                displayDocument(data);
+
+           } catch (error) {
+
+    document.getElementById(
+        "documentName"
+    ).textContent = error.message;
+
+    document.getElementById(
+        "documentInfo"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "extractedData"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "validationData"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "rawJson"
+    ).textContent = "";
+
+}
+        }
+
+
+        function displayDocument(data) {
+
+            document.getElementById(
+                "documentName"
+            ).textContent = data.document_name;
+
+
+            document.getElementById(
+                "documentInfo"
+            ).innerHTML = `
+                <p>
+                    <strong>Document Type:</strong>
+                    ${data.document_type}
+                </p>
+
+                <p>
+                    <strong>Processing Status:</strong>
+                    ${data.processing_status}
+                </p>
+            `;
+
+
+            displayExtractedData(
+                data.extracted_data
+            );
+
+
+            displayValidation(
+                data.validation
+            );
+
+
+            document.getElementById(
+                "rawJson"
+            ).textContent =
+                JSON.stringify(
+                    data,
+                    null,
+                    2
+                );
+        }
+
+
+        function displayExtractedData(data) {
+
+            const container =
+                document.getElementById(
+                    "extractedData"
+                );
+
+            container.innerHTML = "";
+
+            renderObject(
+                data,
+                container
+            );
+        }
+
+
+        function renderObject(
+            object,
+            container,
+            level = 0
+        ) {
+
+            if (
+                object === null ||
+                object === undefined
+            ) {
+                container.innerHTML +=
+                    "<p>Not available</p>";
+
+                return;
+            }
+
+
+            if (Array.isArray(object)) {
+
+                object.forEach((item, index) => {
+
+                    const wrapper =
+                        document.createElement("div");
+
+                    wrapper.className =
+                        "data-block";
+
+                    const heading =
+                        document.createElement("h3");
+
+                    heading.textContent =
+                        `Item ${index + 1}`;
+
+                    wrapper.appendChild(
+                        heading
+                    );
+
+                    renderObject(
+                        item,
+                        wrapper,
+                        level + 1
+                    );
+
+                    container.appendChild(
+                        wrapper
+                    );
+                });
+
+                return;
+            }
+
+
+            if (
+                typeof object === "object"
+            ) {
+
+                const table =
+                    document.createElement("table");
+
+                Object.entries(object)
+                    .forEach(([key, value]) => {
+
+                        const row =
+                            document.createElement("tr");
+
+                        const keyCell =
+                            document.createElement("th");
+
+                        const valueCell =
+                            document.createElement("td");
+
+                        keyCell.textContent = key;
+
+
+                        if (
+                            typeof value === "object" &&
+                            value !== null
+                        ) {
+
+                            const nested =
+                                document.createElement("div");
+
+                            renderObject(
+                                value,
+                                nested,
+                                level + 1
+                            );
+
+                            valueCell.appendChild(
+                                nested
+                            );
+
+                        } else {
+
+                            valueCell.textContent =
+                                value ?? "Not available";
+                        }
+
+
+                        row.appendChild(keyCell);
+                        row.appendChild(valueCell);
+
+                        table.appendChild(row);
+
+                    });
+
+
+                container.appendChild(table);
+
+                return;
+            }
+
+
+            const paragraph =
+                document.createElement("p");
+
+            paragraph.textContent =
+                object;
+
+            container.appendChild(
+                paragraph
+            );
+        }
+
+
+        function displayValidation(validation) {
+
+            const container =
+                document.getElementById(
+                    "validationData"
+                );
+
+            container.innerHTML = "";
+
+
+            const status =
+                document.createElement("h3");
+
+            status.textContent =
+                `Overall Status: ${validation.status}`;
+
+            container.appendChild(status);
+
+
+            if (
+                !validation.checks ||
+                validation.checks.length === 0
+            ) {
+
+                const message =
+                    document.createElement("p");
+
+                message.textContent =
+                    "No financial checks were applicable.";
+
+                container.appendChild(
+                    message
+                );
+
+                return;
+            }
+
+
+            const table =
+                document.createElement("table");
+
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Formula / Check</th>
+                        <th>Calculated</th>
+                        <th>Reported</th>
+                        <th>Variance</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+            `;
+
+
+            const tbody =
+                document.createElement("tbody");
+
+
+            validation.checks.forEach(check => {
+
+                const row =
+                    document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${check.formula}</td>
+                    <td>${check.calculated_value ?? "N/A"}</td>
+                    <td>${check.reported_value ?? "N/A"}</td>
+                    <td>${check.variance ?? "N/A"}</td>
+                    <td>${check.status}</td>
+                `;
+
+                tbody.appendChild(row);
+
+            });
+
+
+            table.appendChild(tbody);
+
+            container.appendChild(table);
+        }
+
+
+        loadDocument();
+    </script>
+
+</body>
+
+</html>
